@@ -1,6 +1,7 @@
 <?php
 
-$reqFile= $_SERVER[ 'QUERY_STRING' ];
+$reqFile= $_SERVER[ 'QUERY_STRING' ]
+or $reqFile= 'std/-/index.html';
 
 if( $reqFile === basename( __FILE__ ) ):
     highlight_file( __FILE__ );
@@ -9,12 +10,6 @@ endif;
 
 $storedDir= getcwd();
 chdir( dirname( __FILE__ ) );
-
-$rootURI=
-'//' . $_SERVER['SERVER_NAME']
-. ':' . $_SERVER['SERVER_PORT']
-. dirname( $_SERVER['SCRIPT_NAME'] ) . '/'
-;
 
 $packDirList= filterFileList( glob( "*", GLOB_BRACE | GLOB_ONLYDIR ) );
 
@@ -26,6 +21,12 @@ function collect( $fileName ){
 	$fileList= filterFileList( $fileList );
 	sort( $fileList );
     return $fileList;
+}
+function execTemplate( $fileName, $param= array() ){
+	extract( $param );
+	ob_start();
+		include( '-templates/' . $fileName . '.php' );
+	return ob_get_clean();
 }
 
 foreach( $packDirList as $packDir ):
@@ -74,10 +75,9 @@ foreach( $packDirList as $packDir ):
 
     $fileList= collect( '*.js' );
 
-	$index= preg_replace( '!(.+)!', '( "../$1" )', $fileList );
-	$index= implode( $index, "\n" );
-	file_put_contents( "-/index.js", "( function( path ){ document.write( '<script src=\"' + path + '\"></script>' ); return arguments.callee } )\n" . $index );
-	file_put_contents( "-/index_export.js", "( function( path ){ document.write( '<script src=\"{$rootURI}{$packDir}/-/' + path + '\"></script>' ); return arguments.callee } )\n" . $index );
+	$scriptList= preg_replace( '!(.+)!', '../$1', $fileList );
+	$index= execTemplate( 'index.js', compact( 'scriptList' ) );
+	file_put_contents( "-/index.js", $index );
 
 	$compiled= array();
 	foreach( $fileList as $file ):
@@ -112,8 +112,8 @@ foreach( $packDirList as $packDir ):
 		);
 	endforeach;
 	ob_start();
-		include( 'index.tpl' );
-	$index= ob_get_clean();
+
+	$index= execTemplate( 'index.html', compact( 'pageList' ) );
 
 	file_put_contents( "-/index.html", $index );
 
@@ -123,9 +123,7 @@ endforeach;
 
 chdir( $storedDir );
 
-if( $reqFile ):
-	?><!doctype html>
-	<style> * { margin: 0; padding: 0; border: none; width: 100%; height: 100% } html, body { overflow: hidden } </style>
-	<iframe src="<?= $reqFile; ?>" frameborder="0"></iframe>
-	<?
-endif;
+?><!doctype html>
+<style> * { margin: 0; padding: 0; border: none; width: 100%; height: 100% } html, body { overflow: hidden } </style>
+<iframe src="<?= $reqFile; ?>" frameborder="0"></iframe>
+<?
