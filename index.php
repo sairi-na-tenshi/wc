@@ -10,8 +10,6 @@ endif;
 $storedDir= getcwd();
 chdir( dirname( __FILE__ ) );
 
-require_once( '-lib/xstyle/xstyle.php' );
-
 $rootURI=
 '//' . $_SERVER['SERVER_NAME']
 . ':' . $_SERVER['SERVER_PORT']
