@@ -20,7 +20,7 @@ sort( $files );
 
 # компиляция в один файл
 $compile= array( 'document.write("' );
-$replaces= array( '"' => '\\"', '\\' => '\\\\', "\n" => "\" +\n\"" );
+$replaces= array( '"' => '\\"', '\\' => '\\\\', "\r" => "", "\n" => "\" +\n\"" );
 foreach( $files as $file ):
 	$compile[]= strtr( "\n<!-- include '../../{$file}' -->\n" . file_get_contents( $file ), $replaces );
 endforeach;
