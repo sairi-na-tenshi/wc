@@ -43,3 +43,6 @@
 [submodule "std/i-docpage"]
 	path = std/i-docpage
 	url = git://github.com/sairi-na-tenshi/i-component_std_i-docpage.git
+[submodule "std/i-hlight-bb"]
+	path = std/i-hlight-bb
+	url = git://github.com/sairi-na-tenshi/web-component_std-parser-bb.git

@@ -19,6 +19,7 @@
 ( "../_base/FValue.js" )
 ( "../i-field-text/i-field-text.js" )
 ( "../i-hlight-/i-hlight.js" )
+( "../i-hlight-bb/i-hlight-bb.js" )
 ( "../i-hlight-code/i-hlight-code.js" )
 ( "../i-hlight-js/i-hlight-js.js" )
 ( "../i-hlight-md/i-hlight-md.js" )
