@@ -4,15 +4,6 @@
 [submodule "std/std-hlight"]
 	path = std/std-hlight
 	url = git://github.com/sairi-na-tenshi/wc_std-hlight.git
-[submodule "std/std-hlight-js"]
-	path = std/std-hlight-js
-	url = git://github.com/sairi-na-tenshi/wc_std-hlight-js.git
-[submodule "std/std-hlight-md"]
-	path = std/std-hlight-md
-	url = git://github.com/sairi-na-tenshi/wc_std-hlight-md.git
-[submodule "std/std-hlight-code"]
-	path = std/std-hlight-code
-	url = git://github.com/sairi-na-tenshi/wc_std-hlight-code.git
 [submodule "std/html"]
 	path = std/html
 	url = git://github.com/sairi-na-tenshi/wc_html.git
