@@ -33,7 +33,7 @@ foreach( $packDirList as $packDir ):
 
 	@mkdir( '-', 0777, true );
 
-	CSS:
+	# CSS
 
     $fileList= collect( '*.css' );
 	$fileCount= count( $fileList );
@@ -70,7 +70,7 @@ foreach( $packDirList as $packDir ):
 	$compiled= implode( $compiled, "\n\n" );
 	file_put_contents( "-/compiled.css", $compiled );
 
-	JS:
+	# JS
 
     $fileList= collect( '*.js' );
 
@@ -87,7 +87,7 @@ foreach( $packDirList as $packDir ):
 	$compiled= implode( $compiled, "\n\n" );
 	file_put_contents( "-/compiled.js", $compiled );
 
-	VML:
+	# VML
 
     $fileList= collect( '*.vml' );
 
@@ -100,7 +100,7 @@ foreach( $packDirList as $packDir ):
 	$compiled= implode( $compiled, "" );
 	file_put_contents( "-/compiled.vml.js", $compiled );
 
-	HTML:
+	# HTML
 
     $fileList= collect( '*.html' );
 
