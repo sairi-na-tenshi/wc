@@ -374,7 +374,7 @@ std\:desktop {
 }
 
 
-/* @import url( '../std-field-string/stdi-field-string.css' ); */
+/* @import url( '../std-field-string/std-field-string.css' ); */
 
 std\:field-string {
 	display: block;
@@ -565,7 +565,7 @@ std\:hlight-md-ghost {
 std\:noframe {
 	display: block;
 	width: 100%;
-	height: 100%;
+	height: 2em;
 	overflow: hidden;
 }
 
