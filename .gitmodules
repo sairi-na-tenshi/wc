@@ -40,3 +40,6 @@
 [submodule "collection/root/editor"]
 	path = collection/root/editor
 	url = git://github.com/sairi-na-tenshi/i-component-root-editor.git
+[submodule "collection/iface/spacer"]
+	path = collection/iface/spacer
+	url = git://github.com/sairi-na-tenshi/i-component-iface-spacer.git
