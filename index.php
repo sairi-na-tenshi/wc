@@ -75,9 +75,9 @@ foreach( $packDirList as $packDir ):
     $fileList= collect( '*.js' );
 
 	$index= preg_replace( '!(.+)!', '( "../$1" )', $fileList );
-	array_unshift( $index, "( function( path ){ document.write( '<script src=\"{$rootURI}{$packDir}/-/' + path + '\"></script>' ); return arguments.callee } )" );
 	$index= implode( $index, "\n" );
-	file_put_contents( "-/index.js", $index );
+	file_put_contents( "-/index.js", "( function( path ){ document.write( '<script src=\"' + path + '\"></script>' ); return arguments.callee } )\n" . $index );
+	file_put_contents( "-/index_export.js", "( function( path ){ document.write( '<script src=\"{$rootURI}{$packDir}/-/' + path + '\"></script>' ); return arguments.callee } )\n" . $index );
 
 	$compiled= array();
 	foreach( $fileList as $file ):
