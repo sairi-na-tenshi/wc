@@ -46,3 +46,6 @@
 [submodule "std/std-hlight-bb"]
 	path = std/std-hlight-bb
 	url = git://github.com/sairi-na-tenshi/wc_std-parser-bb.git
+[submodule "std/std-topmenu"]
+	path = std/std-topmenu
+	url = git://github.com/sairi-na-tenshi/wc_std-topmenu.git
