@@ -1,8 +1,8 @@
 document.write("" +
-"<!-- include '../i-button/i-button-inner_shapetype.vml' -->" +
+"<!-- include '../std-button/std-button-inner_shapetype.vml' -->" +
 "<?import namespace=\"v\" implementation=\"#default#VML\" ?>" +
 "<v:shapetype" +
-"	id='i:button'" +
+"	id='std:button'" +
 "	adj='4'" +
 "	strokecolor='#666'" +
 "	coordorigin='0 0'" +
@@ -45,11 +45,11 @@ document.write("" +
 "" +
 "</v:shapetype>" +
 "" +
-"<!-- include '../i-cpanel/i-panel-shape_shapetype.vml' -->" +
+"<!-- include '../std-cpanel/std-panel-shape_shapetype.vml' -->" +
 "<?import namespace=\"v\" implementation=\"#default#VML\" ?>" +
 "<v:shapetype" +
 "	xmlns:v=\"urn:schemas-microsoft-com:vml\"" +
-"	id='i-cpanel-shape'" +
+"	id='std:cpanel-shape'" +
 "	adj='10'" +
 "	strokecolor='#aaa'" +
 "	coordorigin='0 0'" +

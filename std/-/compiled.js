@@ -483,13 +483,13 @@ var FValue= function( val ){
 
 
 
-/* include( '../i-field-text/i-field-text.js' ); */
+/* include( '../std-field-text/std-field-text.js' ); */
 
-CComponent( 'i:field-text', function( el ){
+CComponent( 'std:field-text', function( el ){
 	var lang= CHiqus( el.className ).get( 'lang' )
 	var input= el.getElementsByTagName( 'textarea' )[0]
 	input.style.display= 'none'
-	var editor= document.createElement( 'i:field-text-content' )
+	var editor= document.createElement( 'std:field-text-content' )
 	editor.innerHTML= input.value
 	editor.contentEditable= true
 	el.appendChild( editor )
@@ -680,7 +680,7 @@ CComponent( 'i:field-text', function( el ){
 
 
 
-/* include( '../i-hlight-/i-hlight.js' ); */
+/* include( '../std-hlight/std-hlight.js' ); */
 
 var HLight= {}
 
@@ -739,7 +739,7 @@ HLight.revert= function( str ){
 	return str
 }
 
-CComponent( 'i:hlight', function( el ){
+CComponent( 'std:hlight', function( el ){
 	var lang= CHiqus( el.className ).get( 'lang' )
 	var hlight= HLight.lang[ lang ] || HLight.lang.text
 	el.innerHTML= hlight( HLight.revert( el.innerHTML ) )
@@ -747,11 +747,11 @@ CComponent( 'i:hlight', function( el ){
 
 
 
-/* include( '../i-hlight-bb/i-hlight-bb.js' ); */
+/* include( '../std-hlight-bb/std-hlight-bb.js' ); */
 
 with( HLight ) lang.bb= FPipe( FConcurentLang( new function(){
 
-	var wrapGhost= TagWrapper( 'i:hlight-bb-ghost' )
+	var wrapGhost= TagWrapper( 'std:hlight-bb-ghost' )
 
 	this[ '(\\[(b)\\])([\\s\\S]*?)(\\[\\/b\\])' ]=
 	this[ '(\\[(i)\\])([\\s\\S]*?)(\\[\\/i\\])' ]=
@@ -762,22 +762,22 @@ with( HLight ) lang.bb= FPipe( FConcurentLang( new function(){
 		,	i: 'italic'
 		,	u: 'underline'
 		}[ mode ]
-		content= TagWrapper( 'i:hlight-bb-' + tagMod )( lang.bb( content ) )
+		content= TagWrapper( 'std:hlight-bb-' + tagMod )( lang.bb( content ) )
 		prefix= wrapGhost( prefix )
 		postfix= wrapGhost( postfix )
 		return prefix + content + postfix
 	}
 
-}), TagWrapper( 'i:hlight-bb' ))
+}), TagWrapper( 'std:hlight-bb' ))
 
 
 
-/* include( '../i-hlight-code/i-hlight-code.js' ); */
+/* include( '../std-hlight-code/std-hlight-code.js' ); */
 
 with( HLight ) lang.code_sign= FCached
 (	FPipe
 	(   lang.text
-	,	TagWrapper( 'i:hlight-code-sign' )
+	,	TagWrapper( 'std:hlight-code-sign' )
 	)
 )
 
@@ -796,11 +796,11 @@ with( HLight ) lang.code= FCached( function( str ){
 
 
 
-/* include( '../i-hlight-js/i-hlight-js.js' ); */
+/* include( '../std-hlight-js/std-hlight-js.js' ); */
 
 with( HLight ) lang.js= FPipe( FConcurentLang( new function(){
 
-	var wrapRemark= TagWrapper( 'i:hlight-js-remark' )
+	var wrapRemark= TagWrapper( 'std:hlight-js-remark' )
 	this[ '\\/\\*([\\s\\S]*?)\\*\\/' ]= function( content ){
 		content= lang.text( content )
 		return wrapRemark( '/*' + content + '*/' )
@@ -810,31 +810,31 @@ with( HLight ) lang.js= FPipe( FConcurentLang( new function(){
 		return wrapRemark( '//' + content )
 	}
 
-	var wrapString= TagWrapper( 'i:hlight-js-string' )
+	var wrapString= TagWrapper( 'std:hlight-js-string' )
 	this[ '"([^\\n]*?)"' ]= function( content ){
 		content= lang.text( content )
 		return wrapString( '"' + content + '"' )
 	}
 
-	var wrapKeyword= TagWrapper( 'i:hlight-js-keyword' )
+	var wrapKeyword= TagWrapper( 'std:hlight-js-keyword' )
 	this[ '\\b(this|function|new|var|if|else|switch|case|default|for|in|while|do|with|boolean|continue|break|throw|true|false|try|catch|null|typeof|instanceof|return|delete)\\b' ]= function( content ){
 		content= content || ''
 		return wrapKeyword( content )
 	}
-}), TagWrapper( 'i:hlight-js' ) )
+}), TagWrapper( 'std:hlight-js' ) )
 
 
 
-/* include( '../i-hlight-md/i-hlight-md.js' ); */
+/* include( '../std-hlight-md/std-hlight-md.js' ); */
 
 with( HLight ) lang.md_inline= FConcurentLang( new function(){
-	var wrapGhost= TagWrapper( 'i:hlight-md-ghost' )
-	var wrapQuote= TagWrapper( 'i:hlight-md-quote' )
-	var wrapRemark= TagWrapper( 'i:hlight-md-remark' )
-	var wrapStrong= TagWrapper( 'i:hlight-md-strong' )
-	var wrapEm= TagWrapper( 'i:hlight-md-em' )
-	var wrapCode= TagWrapper( 'i:hlight-md-code' )
-	var wrapLink= TagWrapper( 'i:hlight-md-link' )
+	var wrapGhost= TagWrapper( 'std:hlight-md-ghost' )
+	var wrapQuote= TagWrapper( 'std:hlight-md-quote' )
+	var wrapRemark= TagWrapper( 'std:hlight-md-remark' )
+	var wrapStrong= TagWrapper( 'std:hlight-md-strong' )
+	var wrapEm= TagWrapper( 'std:hlight-md-em' )
+	var wrapCode= TagWrapper( 'std:hlight-md-code' )
+	var wrapLink= TagWrapper( 'std:hlight-md-link' )
 
 	this[ '((?:ftp|http):\\/\\/\\S+)' ]= function( href ){
 		href= wrapLink( lang.text( href ) )
@@ -882,8 +882,8 @@ with( HLight ) lang.md_inline= FConcurentLang( new function(){
 })
 
 with( HLight ) lang.md= FConcurentLang( new function(){
-	var wrapGhost= TagWrapper( 'i:hlight-md-ghost' )
-	var wrapBlock= TagWrapper( 'i:hlight-md-block' )
+	var wrapGhost= TagWrapper( 'std:hlight-md-ghost' )
+	var wrapBlock= TagWrapper( 'std:hlight-md-block' )
 
 	var brIn= '\n'
 	var brOut= lang.text( brIn )
@@ -913,13 +913,13 @@ with( HLight ) lang.md= FConcurentLang( new function(){
 		var level= marker.length - 1
 		prefix= lang.text( prefix )
 		marker= wrapGhost( marker )
-		content= TagWrapper( 'i:hlight-md-header-' + level )( lang.md_inline( content ) )
+		content= TagWrapper( 'std:hlight-md-header-' + level )( lang.md_inline( content ) )
 		return prefix + marker + content
 	}
-	this[ '((?:(?:^|\\n)> [^\\n]*)+)' ]= RecursiveBlock( '> ', 'i:hlight-md-quote', 'md' )
-	this[ '((?:(?:^|\\n)  [^\\n]*)+)' ]= RecursiveBlock( '  ', 'i:hlight-md-code', 'code' )
-	this[ '((?:(?:^|\\n)\\t[^\\n]*)+)' ]= RecursiveBlock( '\t', 'i:hlight-md-code', 'code' )
-	this[ '((?:(?:^|\\n)\\* [^\\n]*)+)' ]= RecursiveBlock( '\*', 'i:hlight-md-list-item', 'md' )
+	this[ '((?:(?:^|\\n)> [^\\n]*)+)' ]= RecursiveBlock( '> ', 'std:hlight-md-quote', 'md' )
+	this[ '((?:(?:^|\\n)  [^\\n]*)+)' ]= RecursiveBlock( '  ', 'std:hlight-md-code', 'code' )
+	this[ '((?:(?:^|\\n)\\t[^\\n]*)+)' ]= RecursiveBlock( '\t', 'std:hlight-md-code', 'code' )
+	this[ '((?:(?:^|\\n)\\* [^\\n]*)+)' ]= RecursiveBlock( '\*', 'std:hlight-md-list-item', 'md' )
 	this[ '((?:(?:^|\\n)(?!> |\t|  |\\* )[^\\n]+)+)' ]= function( content ){
 		content= wrapBlock( lang.md_inline( content ) )
 		return content
@@ -928,21 +928,18 @@ with( HLight ) lang.md= FConcurentLang( new function(){
 
 
 
-/* include( '../i-noframe/i-noframe.js' ); */
+/* include( '../std-noframe/std-noframe.js' ); */
 
-CComponent( 'i:noframe', function( el ){
+CComponent( 'std:noframe', function( el ){
 
-	var nodeLoader= FLazy( function(){
-		var node= el.getElementsByTagName( 'iframe' )[0]
+	var nodeRoot= FValue( el )
+	var nodeFrame= FLazy( function(){
+		var node= nodeRoot().getElementsByTagName( 'iframe' )[0]
 		return FValue( node )
 	})
-	var nodeContent= FLazy( function(){
-		var node= document.createElement( 'i:noframe-content' )
-		el.appendChild( node )
-		return FValue( node )
-	})
+
 	var docLoaded= function(){
-    	return nodeLoader().contentWindow.document
+    	return nodeFrame().contentWindow.document
 	}
 	var bodyLoaded= function(){
     	var doc= docLoaded()
@@ -950,31 +947,30 @@ CComponent( 'i:noframe', function( el ){
     	return body
 	}
 
-    var updateContent= function(){
+    var dissolve= function(){
     	var body= bodyLoaded()
-    	var content= nodeContent()
-    	content.innerHTML= ''
+    	var root= nodeRoot()
+    	var parent= root.parentNode
     	var frag= docLoaded().createDocumentFragment()
 		var child; while( child= body.firstChild ) frag.appendChild( child )
-		content.appendChild( frag )
-		el.className+= ' loaded=true'
-		var hrefLoaded= docLoaded().location.href
+		parent.insertBefore( frag, root )
+		parent.removeChild( root )
+
 		var hrefCurrent= document.location.href
 		var links= document.links
 		for( var i= 0; i < links.length; ++i ){
 			var link= links[i]
 			if( link.href === hrefCurrent ) link.className+= ' target=true'
-			if( link.target !== nodeLoader().name ) continue
-			if( link.href === hrefLoaded ) link.className+= ' target=true'
 			else link.className= link.className.replace( /\btarget=true\b/, '' )
 		}
-		document.title= docLoaded().title
     }
 
-    var loader= nodeLoader()
-    loader.attachEvent
-    	? loader.attachEvent( 'onload', updateContent )
-    	: loader.onload= updateContent
-    if( bodyLoaded() ) updateContent()
+    if( bodyLoaded() ){
+    	dissolve()
+    } else {
+	    var frame= nodeFrame()
+	    if( frame.attachEvent ) frame.attachEvent( 'onload', dissolve )
+	    else frame.onload= dissolve
+	}
 
 })

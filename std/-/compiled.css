@@ -102,36 +102,14 @@ body {
 
 
 
-/* @import url( '../i-binom/i-binom-left.css' ); */
+/* @import url( '../std-binom/std-binom.css' ); */
 
-i\:binom-left {
-	float: left;
-	width: 45%;
-	margin-right: 10%;
-	min-width: 200px;
-}
-
-
-
-/* @import url( '../i-binom/i-binom-right.css' ); */
-
-i\:binom-right {
-	float: left;
-	width: 45%;
-	min-width: 200px;
-	margin-right: -1%;
-}
-
-
-
-/* @import url( '../i-binom/i-binom.css' ); */
-
-i\:binom {
+std\:binom {
 	display: block;
 	margin: -.5em 0;
 }
 
-i\:binom:after {
+std\:binom:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -141,14 +119,36 @@ i\:binom:after {
 }
 
 
-/* @import url( '../i-button/i-button.css' ); */
+/* @import url( '../std-binom/std-binom-left.css' ); */
 
-i\:button {
+std\:binom-left {
+	float: left;
+	width: 45%;
+	margin-right: 10%;
+	min-width: 200px;
+}
+
+
+
+/* @import url( '../std-binom/std-binom-right.css' ); */
+
+std\:binom-right {
+	float: left;
+	width: 45%;
+	min-width: 200px;
+	margin-right: -1%;
+}
+
+
+
+/* @import url( '../std-button/std-button.css' ); */
+
+std\:button {
     display: inline-block;
     position: relative;
 }
 
-i\:button button {
+std\:button button {
 	white-space: normal;
     cursor: pointer;
     $width: 1%;
@@ -185,17 +185,17 @@ i\:button button {
 	box-shadow: 1px 1px 1px #333;
 }
 
-i\:button button:hover {
+std\:button button:hover {
 	top: -2px;
 	left: -1px;
 }
 
-i\:button button:active {
+std\:button button:active {
 	top: -1px;
 	left: 0;
 }
 
-i\:button v\:shape {
+std\:button v\:shape {
 	display: inline-block;
 	position: absolute;
 	width: 100%;
@@ -207,13 +207,13 @@ i\:button v\:shape {
 	z-index: -1;
 }
 
-i\:button button:hover {
+std\:button button:hover {
 	-webkit-box-shadow: 2px 2px 2px #333;
 	-moz-box-shadow: 2px 2px 1px #333;
 	box-shadow: 2px 2px 2px #333;
 }
 
-i\:button button:active {
+std\:button button:active {
 	-webkit-box-shadow: 1px 1px 1px black;
 	-moz-box-shadow: 1px 1px 0px black;
 	box-shadow: 1px 1px 1px black;
@@ -221,9 +221,33 @@ i\:button button:active {
 
 
 
-/* @import url( '../i-cpanel/i-cpanel-content.css' ); */
+/* @import url( '../std-cpanel/std-cpanel.css' ); */
 
-i\:cpanel-content {
+std\:cpanel {
+	display: block;
+	margin: auto;
+	width: 100%\9;
+	max-width: 1100px;
+    text-align: left;
+    position: relative;
+    $overflow: hidden;
+	z-index: 0;
+
+    padding: 0 10px 0;
+    padding-top: 1px \9;
+    $apadding: 0;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+
+
+/* @import url( '../std-cpanel/std-cpanel-content.css' ); */
+
+std\:cpanel-content {
 	position: relative;
 	top: 1px;
 	top: 0 \9;
@@ -238,9 +262,9 @@ i\:cpanel-content {
 
 
 
-/* @import url( '../i-cpanel/i-cpanel-main.css' ); */
+/* @import url( '../std-cpanel/std-cpanel-main.css' ); */
 
-i\:cpanel-main {
+std\:cpanel-main {
 
 	display: table-cell;
 	$display: block; /* ie7- */
@@ -258,9 +282,9 @@ i\:cpanel-main {
 
 
 
-/* @import url( '../i-cpanel/i-cpanel-shape.css' ); */
+/* @import url( '../std-cpanel/std-cpanel-shape.css' ); */
 
-.i-cpanel-shape {
+.std-cpanel-shape {
 	position: absolute;
 	width: 100%;
     height: 100%;
@@ -288,9 +312,9 @@ i\:cpanel-main {
 
 
 
-/* @import url( '../i-cpanel/i-cpanel-side.css' ); */
+/* @import url( '../std-cpanel/std-cpanel-side.css' ); */
 
-i\:cpanel-side {
+std\:cpanel-side {
 	display: table-cell;
 	margin: 0 0 0 10px;
 	margin: 3px 0 0 13px\9;
@@ -304,9 +328,9 @@ i\:cpanel-side {
 
 
 
-/* @import url( '../i-cpanel/i-cpanel-tab.css' ); */
+/* @import url( '../std-cpanel/std-cpanel-tab.css' ); */
 
-i\:cpanel-tab {
+std\:cpanel-tab {
 	display: block;
 	padding: 10px 20px;
 	font: 24px/1 'Times New Roman', serif;
@@ -314,57 +338,33 @@ i\:cpanel-tab {
 	background: none;
 }
 
-a:hover i\:cpanel-tab {
+a:hover std\:cpanel-tab {
 	background: #ddd;
 }
 
-i\:cpanel-tab.current\=true,
-a.target\=true i\:cpanel-tab {
+std\:cpanel-tab.current\=true,
+a.target\=true std\:cpanel-tab {
 	background: #fff;
 }
 
-a:hover i\:cpanel-tab.current\=true {
+a:hover std\:cpanel-tab.current\=true {
 	background: #fff;
 }
 
 
 
-/* @import url( '../i-cpanel/i-cpanel-tabbar.css' ); */
+/* @import url( '../std-cpanel/std-cpanel-tabbar.css' ); */
 
-i\:cpanel-tabbar {
+std\:cpanel-tabbar {
 	display: block;
 	margin: 0 -10px;
 }
 
 
 
-/* @import url( '../i-cpanel/i-cpanel.css' ); */
+/* @import url( '../std-desktop/std-desktop.css' ); */
 
-i\:cpanel {
-	display: block;
-	margin: auto;
-	width: 100%\9;
-	max-width: 1100px;
-    text-align: left;
-    position: relative;
-    $overflow: hidden;
-	z-index: 0;
-
-    padding: 0 10px 0;
-    padding-top: 1px \9;
-    $apadding: 0;
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-
-}
-
-
-
-/* @import url( '../i-desktop/i-desktop.css' ); */
-
-i\:desktop {
+std\:desktop {
 	display: block;
 	min-width: 100%;
 	min-height: 100%;
@@ -374,65 +374,9 @@ i\:desktop {
 }
 
 
-/* @import url( '../i-docpage/i-docpage-main.css' ); */
+/* @import url( '../std-field-string/stdi-field-string.css' ); */
 
-i\:docpage-main {
-	display: table-cell;
-	$display: block; /* ie7- */
-	zoom: 1;
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-
-/* @import url( '../i-docpage/i-docpage-menu-item.css' ); */
-
-i\:docpage-menu-item {
-	display: block;
-	padding: 5px 10px;
-	font-size: 15px;
-	line-height: 15px
-}
-
-a:hover i\:docpage-menu-item {
-	background: #eee;
-}
-
-a.target\=true i\:docpage-menu-item {
-	font-weight: bold;
-}
-
-
-
-/* @import url( '../i-docpage/i-docpage-side.css' ); */
-
-i\:docpage-side {
-	display: table-cell;
-	vertical-align: top;
-	$float: left;
-	width: 8em;
-	padding: 5px 0;
-}
-
-
-
-/* @import url( '../i-docpage/i-docpage.css' ); */
-
-i\:docpage {
-	display: block;
-	width: 100%\9;
-	max-width: 1100px;
-    text-align: left;
-    position: relative;
-    $overflow: hidden;
-	z-index: 0;
-}
-
-
-
-/* @import url( '../i-field-string/i-field-string.css' ); */
-
-i\:field-string {
+std\:field-string {
 	display: block;
 	border: 1px solid #bbb;
 	background: white;
@@ -446,7 +390,7 @@ i\:field-string {
 	box-shadow: 0px 0px 4px #bbb;
 }
 
-i\:field-string input {
+std\:field-string input {
 	display: block;
 	width: 100%;
 	margin: 0;
@@ -462,22 +406,9 @@ i\:field-string input {
 
 
 
-/* @import url( '../i-field-text/i-field-text-content.css' ); */
+/* @import url( '../std-field-text/std-field-text.css' ); */
 
-i\:field-text-content {
-	padding: 2%;
-	display: block;
-	text-align: left;
-	white-space: pre-wrap;
-	background: white;
-	overflow: auto;
-}
-
-
-
-/* @import url( '../i-field-text/i-field-text.css' ); */
-
-i\:field-text {
+std\:field-text {
 	display: block;
 	border: 1px solid #bbb;
 	background: white;
@@ -492,7 +423,7 @@ i\:field-text {
 
 }
 
-i\:field-text textarea {
+std\:field-text textarea {
 	display: block;
 	width: 100%;
 	border-width: 0;
@@ -507,150 +438,186 @@ i\:field-text textarea {
 
 
 
-/* @import url( '../i-hlight-bb/i-hlight-bb.css' ); */
+/* @import url( '../std-field-text/std-field-text-content.css' ); */
 
-i\:hlight-bb-ghost {
+std\:field-text-content {
+	padding: 2%;
+	display: block;
+	text-align: left;
+	white-space: pre-wrap;
+	background: white;
+	overflow: auto;
+}
+
+
+
+/* @import url( '../std-hlight-bb/std-hlight-bb.css' ); */
+
+std\:hlight-bb-ghost {
 	color: #ddd;
 }
 
-i\:hlight-bb-bold {
+std\:hlight-bb-bold {
 	font-weight: bold;
 }
 
-i\:hlight-bb-italic {
+std\:hlight-bb-italic {
 	font-style: italic;
 }
 
-i\:hlight-bb-underline {
+std\:hlight-bb-underline {
 	text-decoration: underline;
 }
 
 
 
-/* @import url( '../i-hlight-code/i-hllight-code.css' ); */
+/* @import url( '../std-hlight-code/std-hllight-code.css' ); */
 
-i\:hlight-code-sign {
+std\:hlight-code-sign {
 	color: #aaa;
 	font-style: italic;
 }
 
 
 
-/* @import url( '../i-hlight-js/i-hlight-js.css' ); */
+/* @import url( '../std-hlight-js/std-hlight-js.css' ); */
 
-i\:hlight-js {
+std\:hlight-js {
 	line-height: 1em;
 	font-family: 'Lucida Console', monospace;
 	white-space: pre;
 }
 
-i\:hlight-js-remark {
+std\:hlight-js-remark {
 	color: #bbb;
 }
 
-i\:hlight-js-string {
+std\:hlight-js-string {
 	color: #393;
 }
 
-i\:hlight-js-keyword {
+std\:hlight-js-keyword {
 	color: #339;
 	font-weight: bold;
 }
 
 
 
-/* @import url( '../i-hlight-md/i-hlight-md.css' ); */
+/* @import url( '../std-hlight-md/std-hlight-md.css' ); */
 
-i\:hlight-md-code {
+std\:hlight-md-code {
 	font-size: .85em;
 	line-height: 1em;
 	font-family: 'Lucida Console', monospace;
 	white-space: pre;
 }
 
-i\:hlight-md-block {
+std\:hlight-md-block {
 }
 
-i\:hlight-md-header-1 {
+std\:hlight-md-header-1 {
 	color: #339;
 	font-size: 32px;
 }
 
-i\:hlight-md-header-2 {
+std\:hlight-md-header-2 {
 	color: #339;
 	font-size: 28px;
 }
 
-i\:hlight-md-header-3 {
+std\:hlight-md-header-3 {
 	color: #339;
 	font-size: 24px;
 }
 
-i\:hlight-md-quote {
+std\:hlight-md-quote {
 	color: #393;
 }
 
-i\:hlight-md-list-item {
+std\:hlight-md-list-item {
 	color: #933;
 }
 
-i\:hlight-md-strong {
+std\:hlight-md-strong {
 	font-weight: bold;
 }
 
-i\:hlight-md-em {
+std\:hlight-md-em {
 	font-style: italic;
 }
 
-i\:hlight-md-remark {
+std\:hlight-md-remark {
 	color: #777;
 }
 
-i\:hlight-md-link {
+std\:hlight-md-link {
 	color: #77f;
 }
 
-i\:hlight-md-ghost {
+std\:hlight-md-ghost {
 	color: #ddd;
 }
 
-i\:hlight i\:hlight-md-ghost {
-	width: 0;
-	font-size: 0;
-}
 
 
+/* @import url( '../std-noframe/std-noframe.css' ); */
 
-/* @import url( '../i-noframe/i-noframe-loader.css' ); */
-
-.i-noframe-loader {
+std\:noframe {
 	display: block;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 }
 
-i\:noframe.loaded\=true .i-noframe-loader {
-	height: 0px;
-}
-
-
-
-/* @import url( '../i-noframe/i-noframe.css' ); */
-
-i\:noframe {
+std\:noframe iframe {
 	display: block;
 	width: 100%;
 	height: 100%;
+	border: none;
+	background: none;
+}
+
+std\:noframe.inited\=true {
+	height: 0;
 }
 
 
 
-/* @import url( '../i-spacer/i-spacer.css' ); */
+/* @import url( '../std-spacer/std-spacer.css' ); */
 
-i\:spacer {
+std\:spacer {
 	display: block;
     margin: 9% 10%;
     zoom: 1;
     position: relative;
+}
+
+
+
+/* @import url( '../std-topmenu/std-topmenu.css' ); */
+
+std\:topmenu {
+	display: block;
+	background: #eee;
+	color: black;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	line-height: 1;
+	font-size: 15px;
+	font-family: 'Tahoma', sans-serif;
+}
+
+std\:topmenu a {
+	display: inline-block;
+	zoom: 1;
+	padding: 8px;
+}
+
+std\:topmenu a.target\=true {
+	font-weight: bold;
+}
+
+std\:topmenu a:hover {
+	background: white;
 }
 

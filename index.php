@@ -16,10 +16,16 @@ $packDirList= filterFileList( glob( "*", GLOB_BRACE | GLOB_ONLYDIR ) );
 function filterFileList( $list ){
 	return preg_grep( '!(?:^|/)[-.]!m', $list, PREG_GREP_INVERT );
 }
+function sortFileList( $list ){
+	foreach( $list as &$path ) $path= strtr( $path, array( '-' => '/', '/' => '-' ) );
+	sort( $list );
+	foreach( $list as &$path ) $path= strtr( $path, array( '-' => '/', '/' => '-' ) );
+	return $list;
+}
 function collect( $fileName ){
 	$fileList= glob( "*/{$fileName}", GLOB_BRACE );
 	$fileList= filterFileList( $fileList );
-	sort( $fileList );
+	$fileList= sortFileList( $fileList );
     return $fileList;
 }
 function execTemplate( $fileName, $param= array() ){
@@ -124,6 +130,7 @@ endforeach;
 chdir( $storedDir );
 
 ?><!doctype html>
+<title>WC Auto Compiler</title>
 <style> * { margin: 0; padding: 0; border: none; width: 100%; height: 100% } html, body { overflow: hidden } </style>
 <iframe src="<?= $reqFile; ?>" frameborder="0"></iframe>
 <?
