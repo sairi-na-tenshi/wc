@@ -1,42 +1,45 @@
-[submodule "collection/_base/reset"]
-	path = collection/_base/reset
-	url = git://github.com/sairi-na-tenshi/i-component-base-reset.git
-[submodule "collection/_base/component"]
-	path = collection/_base/component
-	url = git://github.com/sairi-na-tenshi/i-component-base-component.git
-[submodule "collection/_base/functors"]
-	path = collection/_base/functors
-	url = git://github.com/sairi-na-tenshi/js-functor-collection.git
-[submodule "collection/hlight/_base"]
-	path = collection/hlight/_base
-	url = git://github.com/sairi-na-tenshi/i-component-hlight-base.git
-[submodule "collection/hlight/lang-js"]
-	path = collection/hlight/lang-js
-	url = git://github.com/sairi-na-tenshi/i-component-hlight-lang-js.git
-[submodule "collection/hlight/lang-md"]
-	path = collection/hlight/lang-md
-	url = git://github.com/sairi-na-tenshi/i-component-hlight-lang-md.git
-[submodule "collection/hlight/lang-code"]
-	path = collection/hlight/lang-code
-	url = git://github.com/sairi-na-tenshi/i-component-hlight-lang-code.git
-[submodule "collection/html/common"]
-	path = collection/html/common
-	url = git://github.com/sairi-na-tenshi/i-component-html.git
-[submodule "collection/iface/binom"]
-	path = collection/iface/binom
-	url = git://github.com/sairi-na-tenshi/i-component-iface-binom.git
-[submodule "collection/iface/panel"]
-	path = collection/iface/panel
-	url = git://github.com/sairi-na-tenshi/i-component-iface-panel.git
-[submodule "collection/iface/button"]
-	path = collection/iface/button
-	url = git://github.com/sairi-na-tenshi/i-component-iface-button.git
-[submodule "collection/iface/field"]
-	path = collection/iface/field
-	url = git://github.com/sairi-na-tenshi/i-component-iface-field.git
-[submodule "collection/iface/spacer"]
-	path = collection/iface/spacer
-	url = git://github.com/sairi-na-tenshi/i-component-iface-spacer.git
-[submodule "collection/iface/desktop"]
-	path = collection/iface/desktop
-	url = git://github.com/sairi-na-tenshi/i-component-iface-desktop.git
+[submodule "std/_base"]
+	path = std/_base
+	url = git://github.com/sairi-na-tenshi/i-component_std_base.git
+[submodule "std/i-hlight-"]
+	path = std/i-hlight-
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight.git
+[submodule "std/i-hlight-js"]
+	path = std/i-hlight-js
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight-js.git
+[submodule "std/i-hlight-md"]
+	path = std/i-hlight-md
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight-md.git
+[submodule "std/i-hlight-code"]
+	path = std/i-hlight-code
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight-code.git
+[submodule "std/html"]
+	path = std/html
+	url = git://github.com/sairi-na-tenshi/i-component_std_html.git
+[submodule "std/i-binom"]
+	path = std/i-binom
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-binom.git
+[submodule "std/i-cpanel"]
+	path = std/i-cpanel
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-cpanel.git
+[submodule "std/i-button"]
+	path = std/i-button
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-button.git
+[submodule "std/i-field-string"]
+	path = std/i-field-string
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-field-string.git
+[submodule "std/i-field-text"]
+	path = std/i-field-text
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-field-text.git
+[submodule "std/i-spacer"]
+	path = std/i-spacer
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-spacer.git
+[submodule "std/i-desktop"]
+	path = std/i-desktop
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-desktop.git
+[submodule "std/i-noframe"]
+	path = std/i-noframe
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-noframe.git
+[submodule "std/i-docpage"]
+	path = std/i-docpage
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-docpage.git
