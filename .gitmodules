@@ -34,12 +34,9 @@
 [submodule "collection/iface/field"]
 	path = collection/iface/field
 	url = git://github.com/sairi-na-tenshi/i-component-iface-field.git
-[submodule "collection/root/page"]
-	path = collection/root/page
-	url = git://github.com/sairi-na-tenshi/i-component-root-page.git
-[submodule "collection/root/editor"]
-	path = collection/root/editor
-	url = git://github.com/sairi-na-tenshi/i-component-root-editor.git
 [submodule "collection/iface/spacer"]
 	path = collection/iface/spacer
 	url = git://github.com/sairi-na-tenshi/i-component-iface-spacer.git
+[submodule "collection/iface/desktop"]
+	path = collection/iface/desktop
+	url = git://github.com/sairi-na-tenshi/i-component-iface-desktop.git
