@@ -1,48 +1,48 @@
 [submodule "std/_base"]
 	path = std/_base
-	url = git://github.com/sairi-na-tenshi/i-component_std_base.git
-[submodule "std/i-hlight-"]
-	path = std/i-hlight-
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight.git
-[submodule "std/i-hlight-js"]
-	path = std/i-hlight-js
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight-js.git
-[submodule "std/i-hlight-md"]
-	path = std/i-hlight-md
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight-md.git
-[submodule "std/i-hlight-code"]
-	path = std/i-hlight-code
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight-code.git
+	url = git://github.com/sairi-na-tenshi/wc_base.git
+[submodule "std/std-hlight"]
+	path = std/std-hlight
+	url = git://github.com/sairi-na-tenshi/wc_std-hlight.git
+[submodule "std/std-hlight-js"]
+	path = std/std-hlight-js
+	url = git://github.com/sairi-na-tenshi/wc_std-hlight-js.git
+[submodule "std/std-hlight-md"]
+	path = std/std-hlight-md
+	url = git://github.com/sairi-na-tenshi/wc_std-hlight-md.git
+[submodule "std/std-hlight-code"]
+	path = std/std-hlight-code
+	url = git://github.com/sairi-na-tenshi/wc_std-hlight-code.git
 [submodule "std/html"]
 	path = std/html
-	url = git://github.com/sairi-na-tenshi/i-component_std_html.git
-[submodule "std/i-binom"]
-	path = std/i-binom
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-binom.git
-[submodule "std/i-cpanel"]
-	path = std/i-cpanel
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-cpanel.git
-[submodule "std/i-button"]
-	path = std/i-button
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-button.git
-[submodule "std/i-field-string"]
-	path = std/i-field-string
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-field-string.git
-[submodule "std/i-field-text"]
-	path = std/i-field-text
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-field-text.git
-[submodule "std/i-spacer"]
-	path = std/i-spacer
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-spacer.git
-[submodule "std/i-desktop"]
-	path = std/i-desktop
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-desktop.git
-[submodule "std/i-noframe"]
-	path = std/i-noframe
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-noframe.git
-[submodule "std/i-docpage"]
-	path = std/i-docpage
-	url = git://github.com/sairi-na-tenshi/i-component_std_i-docpage.git
-[submodule "std/i-hlight-bb"]
-	path = std/i-hlight-bb
-	url = git://github.com/sairi-na-tenshi/web-component_std-parser-bb.git
+	url = git://github.com/sairi-na-tenshi/wc_html.git
+[submodule "std/std-binom"]
+	path = std/std-binom
+	url = git://github.com/sairi-na-tenshi/wc_std-binom.git
+[submodule "std/std-cpanel"]
+	path = std/std-cpanel
+	url = git://github.com/sairi-na-tenshi/wc_std-cpanel.git
+[submodule "std/std-button"]
+	path = std/std-button
+	url = git://github.com/sairi-na-tenshi/wc_std-button.git
+[submodule "std/std-field-string"]
+	path = std/std-field-string
+	url = git://github.com/sairi-na-tenshi/wc_std-field-string.git
+[submodule "std/std-field-text"]
+	path = std/std-field-text
+	url = git://github.com/sairi-na-tenshi/wc_std-field-text.git
+[submodule "std/std-spacer"]
+	path = std/std-spacer
+	url = git://github.com/sairi-na-tenshi/wc_std-spacer.git
+[submodule "std/std-desktop"]
+	path = std/std-desktop
+	url = git://github.com/sairi-na-tenshi/wc_std-desktop.git
+[submodule "std/std-noframe"]
+	path = std/std-noframe
+	url = git://github.com/sairi-na-tenshi/wc_std-noframe.git
+[submodule "std/std-docpage"]
+	path = std/std-docpage
+	url = git://github.com/sairi-na-tenshi/wc_std-docpage.git
+[submodule "std/std-hlight-bb"]
+	path = std/std-hlight-bb
+	url = git://github.com/sairi-na-tenshi/wc_std-parser-bb.git
