@@ -3,7 +3,7 @@
 	url = git@github.com:sairi-na-tenshi/i-component_std_base.git
 [submodule "std/i-hlight-"]
 	path = std/i-hlight-
-	url = git@github.com:sairi-na-tenshi/i-component_std_base.git
+	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight.git
 [submodule "std/i-hlight-js"]
 	path = std/i-hlight-js
 	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight-js.git
