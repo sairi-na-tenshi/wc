@@ -37,3 +37,24 @@
 [submodule "std/std-topmenu"]
 	path = std/std-topmenu
 	url = git://github.com/sairi-na-tenshi/wc_std-topmenu.git
+[submodule "std/std-lang"]
+	path = std/std-lang
+	url = git://github.com/sairi-na-tenshi/wc_std-lang.git
+[submodule "std/std-lang-js"]
+	path = std/std-lang-js
+	url = git://github.com/sairi-na-tenshi/wc_std-lang-js.git
+[submodule "std/std-lang-md"]
+	path = std/std-lang-md
+	url = git://github.com/sairi-na-tenshi/wc_std-lang-md.git
+[submodule "std/std-lang-code"]
+	path = std/std-lang-code
+	url = git://github.com/sairi-na-tenshi/wc_std-lang-code.git
+[submodule "std/std-lang-pcre"]
+	path = std/std-lang-pcre
+	url = git://github.com/sairi-na-tenshi/wc_std-lang-pcre.git
+[submodule "std/std-lang-bb"]
+	path = std/std-lang-bb
+	url = git://github.com/sairi-na-tenshi/wc_std-lang-bb.git
+[submodule "std/std-lang-html"]
+	path = std/std-lang-html
+	url = git://github.com/sairi-na-tenshi/wc_std-lang-html.git
