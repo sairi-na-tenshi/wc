@@ -1,6 +1,6 @@
 [submodule "std/_base"]
 	path = std/_base
-	url = git@github.com:sairi-na-tenshi/i-component_std_base.git
+	url = git://github.com/sairi-na-tenshi/i-component_std_base.git
 [submodule "std/i-hlight-"]
 	path = std/i-hlight-
 	url = git://github.com/sairi-na-tenshi/i-component_std_i-hlight.git
