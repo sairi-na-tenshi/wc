@@ -58,6 +58,4 @@
 [submodule "std/std-lang-html"]
 	path = std/std-lang-html
 	url = git://github.com/sairi-na-tenshi/wc_std-lang-html.git
-[submodule "std/vml"]
-	path = std/vml
-	url = git://github.com/sairi-na-tenshi/wc_vml.git
+
