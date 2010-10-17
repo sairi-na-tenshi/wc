@@ -10,6 +10,7 @@
 	<link href="../-/index.css" rel="stylesheet" />
 	<!--[if IE ]><script src="../-/compiled.vml.js"></script><![endif]-->
 	<script src="../-/index.js" type="text/javascript"></script>
+	<base target="_parent" />
 </head>
 <body>
 	<std:topmenu>
